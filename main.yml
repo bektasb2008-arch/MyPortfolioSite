@@ -4,8 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Html5Validator
-        uses: cygnetdigital/html5validator-action@master
+      - uses: actions/checkout@v3
+      - name: Check HTML
+        uses: anishathalye/proof-html@v1
         with:
-          root-subdirectory: .
+          directory: .
