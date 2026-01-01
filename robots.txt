@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bektasb2008-arch.github.io/MyPortfolioSite/sitemap.xml
