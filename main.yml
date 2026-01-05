@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Check HTML
-        uses: anishathalye/proof-html@v1
+        uses: mikeal/html-validator-action@v2
         with:
           directory: .
