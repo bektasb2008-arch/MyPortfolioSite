@@ -1,11 +1,19 @@
 name: HTML Validator
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Check HTML
-        uses: mikeal/html-validator-action@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          directory: .
+          python-version: '3.x'
+
+      - name: Install and Run HTML5 Validator
+        run: |
+          pip install html5validator
+          html5validator --root . --show-warnings
